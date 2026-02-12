@@ -18,8 +18,29 @@ public class Main {
 
         System.out.print("How many minutes have you been in class? ");
         int timeInput = input.nextInt();
+        timeInput += 30;
+//        timeInput = timeInput + 30;
         int hours = timeInput / 60;
         int minutes = timeInput % 60;
-        System.out.println("You have been in class for " + hours + " hours and " + minutes + " minutes.");
+        System.out.println("In an hour and half, you'll have been in class for " + hours++ + " hours and " + minutes + " minutes.");
+        System.out.println(hours);
+
+//        // Absolute value
+//        float num = -76.5f;
+//        double squared = Math.pow(num, 2);
+//        double abs = Math.pow(squared, .5);
+//        System.out.println(abs);
+//        System.out.println(Math.pow(Math.pow(num, 2), .5));
+
+        System.out.println("How many pizzas we bringin: ");
+        int numPizzas = input.nextInt();
+        int numStudents = 30;
+        double areaOfPizza = Math.PI * Math.pow(6, 2) * numPizzas;
+
+        double numPizzasDouble = numPizzas;
+        int areaOfPizzaInt = (int)(areaOfPizza+.5);
+
+        System.out.println("Pizza per student: " + (float) numPizzas / numStudents);
+        System.out.println("Pizza sq. inches per student: " + areaOfPizza / numStudents);
     }
 }
